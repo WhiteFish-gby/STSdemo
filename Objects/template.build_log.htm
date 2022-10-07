@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: gong qws, cia, LIC=EXJT4-FJSEL-UHX8H-W2L0L-67JG6-WERQD
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  D:\keil\keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+D:\myproject\keil_projects\stm32\F401ccu6\221004test\template.uvprojx
+Project File Date:  10/05/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'D:\keil\keil\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling system_stm32f4xx.c...
+compiling buzzer.c...
+assembling startup_stm32f401xc.s...
+Main/main.c(9): warning: implicit declaration of function 'SysInit' is invalid in C99 [-Wimplicit-function-declaration]
+    SysInit();
+    ^
+Main/main.c(11): warning: implicit declaration of function 'drv_init_BUZZER' is invalid in C99 [-Wimplicit-function-declaration]
+    drv_init_BUZZER();
+    ^
+Main/main.c(15): warning: implicit declaration of function 'STS_Run' is invalid in C99 [-Wimplicit-function-declaration]
+    STS_Run();
+    ^
+3 warnings generated.
+compiling main.c...
+compiling alarm.c...
+compiling STS.c...
+compiling timebase.c...
+compiling led.c...
+compiling key.c...
+Driver/uart.c(63): warning: passing 'uint8_t[64]' (aka 'unsigned char[64]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    sprintf(tmpchar, "\nHelloWorld!\n");
+            ^~~~~~~
+D:\keil\keil\ARM\ARMCLANG\Bin\..\include\stdio.h(417): note: passing argument to parameter here
+extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+                                                  ^
+Driver/uart.c(64): warning: passing 'uint8_t[64]' (aka 'unsigned char[64]') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    HAL_UART_Transmit(&huart1, tmpchar, strlen(tmpchar), 1);
+                                               ^~~~~~~
+D:\keil\keil\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+2 warnings generated.
+compiling uart.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_uart.c...
+linking...
+Program Size: Code=6066 RO-data=462 RW-data=20 ZI-data=2452  
+FromELF: creating hex file...
+".\Objects\template.axf" - 0 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  D:/keil/keil/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

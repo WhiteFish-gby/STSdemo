@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.asm": "assembly",
+        "stm32f401xc.h": "c",
+        "stdbool.h": "c",
+        "stm32f4xx.h": "c",
+        "buzzer.h": "c",
+        "uart.h": "c",
+        "sts.h": "c"
+    }
+}
