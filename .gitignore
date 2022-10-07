@@ -2,9 +2,9 @@
 *.includecache
 *.白鱼
 *.uvoptx
-.vscode
-logs/*
-build/*
-DebugConfig/*
-Objects/*
-Listings/*
+/.vscode
+/logs/*
+/build/*
+/DebugConfig/*
+/Objects/*
+/Listings/*
