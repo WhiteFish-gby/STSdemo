@@ -14,7 +14,7 @@ enum BuzzerSignal
 
 
 
-void init_drv_BUZZER(void);
+void drv_init_BUZZER(void);
 
 enum BuzzerSignal get_bzSignal();
 void setBZSignal(enum BuzzerSignal signal);
