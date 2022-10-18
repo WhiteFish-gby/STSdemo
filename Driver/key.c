@@ -6,17 +6,21 @@
 void KEY_server(unsigned int Task_ID)
 {
     static uint8_t keyValue = 0;
-    for (uint8_t i = 0; i < 8; i++)
+    static uint8_t ikeyValue = 0;
+    if ((~GPIOA->IDR) & (1 << 0))
     {
-        if ((~GPIOA->IDR) & (1 << 0))
-        {
-            keyValue |= 1 << i;
-        }
-        else
-        {
-            keyValue = 0;
-        }
+        keyValue |= 1 << ikeyValue;
     }
+    else
+    {
+        keyValue &= 0 << ikeyValue;
+    }
+    ++ikeyValue;
+    if (ikeyValue == 8)
+    {
+        ikeyValue = 0;
+    }
+    
     if (!((~keyValue) & 0b11111111))
     {
         setBZSignal(BZSignal_Stop);

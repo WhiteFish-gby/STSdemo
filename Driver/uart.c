@@ -60,7 +60,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef *huart)
 }
 void UART_server(unsigned int Task_ID)
 {
-    sprintf(tmpchar, "\nHelloWorld!\n");
+    sprintf(tmpchar, "\r\nHelloWorld!");
     HAL_UART_Transmit(&huart1, tmpchar, strlen(tmpchar), 1);
 }
 void drv_init_uart()
